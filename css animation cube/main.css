@@ -1,25 +1,49 @@
 .cube {
-    height: 200px;
-    width: 200px;
-    position: relative;
-    margin: 100px;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  margin: 100px;
+  /* how close you are to cube. like 100px is too close */
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  /* initial rotation of whole cube */
+  transform: rotateX(25deg) rotateY(-25deg);
 }
 
 .face {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    transform: all 1s;
-    perspective: 1000px;
-    transform-style: preserve-3d;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  /* position of whole cube */
+  top: 20%;
+  left: 20%;
+  transform: all 1s;
 }
 
 .one {
-    background-color: skyblue;
+  background-color: skyblue;
+}
+/* All values wrt to initial rotation of cube */
+.two {
+  background-color: orange;
+  transform: rotateY(90deg) translateZ(-100px) translateX(-100px);
 }
 
-.one:hover {
-    transform: rotateX(40deg) rotateY(40deg);
+.three {
+  background-color: red;
+  transform: rotateY(90deg) translateZ(100px) translateX(-100px);
+}
+.four {
+  background-color: blue;
+  transform: rotateX(90deg) translateZ(100px) translateY(100px);
+}
+
+.five {
+  background-color: green;
+  transform: rotateX(90deg) translateZ(-100px) translateY(100px);
+}
+
+.six {
+  background-color: violet;
+  transform: translateZ(200px);
 }
