@@ -1,0 +1,54 @@
+div {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    transition: all 2s ease-in-out;
+    background-color: aquamarine;
+}
+
+@keyframes fadestate {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+#fade {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    transition: all 2s ease-in-out;
+    background-color: red;
+}
+
+#fade:hover {
+    animation: fadestate 1s ease-in-out 2 alternate;
+}
+
+@keyframes changestate {
+    from {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(-100px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    75% {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+div:hover {
+    animation: changestate 1s ease-in-out 1;
+}
