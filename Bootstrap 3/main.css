@@ -1,3 +1,17 @@
 .h1-m {
     margin: 63px;
 }
+
+.parallax {
+    /* The image used */
+    background-image: url("mouse.jpg");
+  
+    /* Set a specific height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: cover;
+  }
